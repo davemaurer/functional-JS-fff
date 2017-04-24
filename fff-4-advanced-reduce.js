@@ -12,11 +12,11 @@ var output = fs.readFileSync('data.txt', 'utf8')
   // map over the array of strings to turn it into a more manageable object
   .map(line => line.split('\t'))
   .reduce((customers, line) => {
-    customers[line[0]] = [];
+    customers[line[0]] = customers[line[0]] || [];
     customers[line[0]].push({
       name: line[1],
       price: line[2],
-      quantity: line[4]
+      quantity: line[3]
     });
     return customers
   }, {});
