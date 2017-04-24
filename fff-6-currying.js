@@ -50,7 +50,8 @@ console.log(tinyFluffy('lightning'));
 // above we only break out two of the arguments into functions, then console.log the last function with the
 // argument of lightning.
 
-// Currying is useful when you
+// Currying takes every argument passed to a function by itself and returns a new function that expects the
+// next function dependency until all dependencies have been fulfilled. Then the final value is returned.
 
 let dragons = [
   { name: 'fluffykins', element: 'lightning' },
@@ -67,6 +68,9 @@ let dragons = [
 //after curry
 let hasElement =
   _.curry((element, obj) => obj.element === element);
+// now has element is curryable, and will return a new function when called with the argument lightning, so it's
+// passed as the callback function to filter directly.
+
 
 //before curry
 // let lightningDragons =
