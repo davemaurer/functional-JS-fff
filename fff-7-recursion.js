@@ -2,6 +2,7 @@
 // need to be a stop condition like until this happens or while. It can be a forEach that iterates
 // over a collection a set amount of times, calling the parent function again for each iteration.
 
+// this line: ** let countDownFrom = function(num) { ** is the same as the line below
 let countDownFrom = (num) => {
   if (num === 0) return;
   console.log(num);
