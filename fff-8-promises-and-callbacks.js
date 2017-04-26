@@ -40,3 +40,20 @@ fruits.forEach(function(val) {
   console.log(val);
 });
 
+// asynchronous callback example using ajax
+
+$.get("data/tweets.json", function(data) {
+  console.log(data);
+
+});
+// if you then say:
+console.log("test");
+// the console will output "test" before it outputs the tweets object due to the callback running asynchronously.
+// the same code could look like this, where the callback is broken out on it's own line.
+function cb(data) {
+  console.log(data);
+}
+
+$.get("data/tweets.json", cb);
+
+console.log("test");
