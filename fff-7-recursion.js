@@ -11,7 +11,7 @@ let countDownFrom = (num) => {
 
 countDownFrom(10);
 
-// Why: A loop would suffice, but recursion can do things that loops cannot.
+// Why: A loop would suffice for the above example, but recursion can do things that loops cannot.
 
 let categories = [
   { id: 'animals', 'parent': null },
