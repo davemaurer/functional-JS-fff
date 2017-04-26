@@ -32,3 +32,11 @@ let resolveFunc = function (num) {
 };
 
 console.log(addNum(5, resolveFunc));
+
+// callback example with the callback being a function defined inside the parent/higher-order function.
+// this is also called inline declaration of the callback.
+let fruits = ["banana", "apple", "pear"];
+fruits.forEach(function(val) {
+  console.log(val);
+});
+
