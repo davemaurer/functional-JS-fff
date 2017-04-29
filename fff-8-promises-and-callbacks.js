@@ -57,3 +57,21 @@ function cb(data) {
 $.get("data/tweets.json", cb);
 
 console.log("test");
+
+// promises work like callbacks but they have built in functions that define behavior if they resolve or fail
+
+let momIsHappy = false;
+
+let willGetNewPhone = new Promise (function (resolve, reject) {
+  if (momIsHappy) {
+    let phone = {
+      brand: 'Apple',
+      model: 'Iphone 8',
+      color: 'black'
+    };
+    resolve(phone);
+  } else {
+    let reason = new Error('Mom is not happy');
+    reject(reason);
+  }
+});
